@@ -1,0 +1,12 @@
+package com.example.belajarchapter5.PertemuanKedua
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.belajarchapter5.R
+
+class PertemuanKeduaActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_pertemuan_kedua)
+    }
+}
