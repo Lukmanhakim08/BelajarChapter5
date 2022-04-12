@@ -26,30 +26,30 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/text_judulfilm"
+                android:id="@+id/text_nama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Judul film"
+                android:text="Nama"
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/black"/>
 
             <TextView
-                android:id="@+id/text_tglfilm"
+                android:id="@+id/text_alamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="tanggal film film"
+                android:text="Alamat"
                 android:textStyle="italic"
                 android:textSize="12dp"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/purple_700"/>
 
             <TextView
-                android:id="@+id/text_sutradara"
+                android:id="@+id/text_umur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sutradara film"
+                android:text="Umur"
                 android:textSize="17dp"
                 android:textColor="@color/black"/>
 
