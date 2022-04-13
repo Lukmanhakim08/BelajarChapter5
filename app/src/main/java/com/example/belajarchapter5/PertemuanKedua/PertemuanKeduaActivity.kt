@@ -1,5 +1,6 @@
 package com.example.belajarchapter5.PertemuanKedua
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -19,6 +20,11 @@ class PertemuanKeduaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pertemuan_kedua)
 
+        fab_add.setOnClickListener {
+            val pind = Intent(this, AddfilmActivity::class.java)
+            startActivity(pind)
+        }
+
         getDataFilm()
         getDataUser()
     }
@@ -32,7 +38,11 @@ class PertemuanKeduaActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful){
                         val datafilm = response.body()
-                        val adapterFilm = AdapterFilm(datafilm!!)
+                        val adapterFilm = AdapterFilm(datafilm!!){
+                            val pindah = Intent(this@PertemuanKeduaActivity, DetailActivity::class.java)
+                            pindah.putExtra("detaifilm", it)
+                            startActivity(pindah)
+                        }
                         val lm = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
                         rv_film.layoutManager = lm
                         rv_film.adapter = adapterFilm

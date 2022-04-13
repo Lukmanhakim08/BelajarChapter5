@@ -16,5 +16,7 @@ data class GetAllFilmResponseItem(
     @SerializedName("image")
     val image: String,
     @SerializedName("name")
-    val name: String
+    val name: String,
+    @SerializedName("description")
+    val description: String
 ) : Parcelable

@@ -14,5 +14,9 @@ class MainActivity : AppCompatActivity() {
         btn_pertemuan_kedua.setOnClickListener {
             startActivity(Intent(this, PertemuanKeduaActivity::class.java))
         }
+
+        btn_pertemuan_ketiga.setOnClickListener {
+            startActivity(Intent(this, PertemuanKeduaActivity::class.java))
+        }
     }
 }

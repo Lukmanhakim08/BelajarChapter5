@@ -8,16 +8,36 @@
     tools:context=".PertemuanKedua.PertemuanKeduaActivity"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Film"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text_film"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_film"
+        android:layout_below="@+id/text_film"
         android:layout_width="match_parent"
-        android:layout_height="300dp" />
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Film"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text_user"
+        android:layout_below="@+id/rv_film"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="10dp"
         android:id="@+id/rv_user"
-        android:layout_below="@+id/rv_film"
+        android:layout_below="@+id/text_user"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
