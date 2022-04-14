@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarChapter5">
         <activity
+            android:name=".PertemuanKedua.UpdateFilmActivity"
+            android:exported="false" />
+        <activity
             android:name=".PertemuanKedua.AddfilmActivity"
             android:exported="false" />
         <activity

@@ -82,4 +82,13 @@ class PertemuanKeduaActivity : AppCompatActivity() {
 
             })
     }
+
+    override fun onResume() {
+        super.onResume()
+        getDataFilm()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
 }
