@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarChapter5">
         <activity
+            android:name=".MingguKedua.LiveDataViewModel.LiveDataViewModelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MingguKedua.ViewModel.ViewModelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MingguKedua.MingguKeduaActivity"
+            android:exported="false" />
+        <activity
             android:name=".PertemuanKedua.UpdateFilmActivity"
             android:exported="false" />
         <activity

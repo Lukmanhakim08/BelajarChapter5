@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MingguKedua.MingguKeduaActivity"
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_pertemuan_kedua"
+        android:id="@+id/btn_viewmodel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pertemuan Kedua"
         android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="View Model"
         android:layout_marginTop="10dp"/>
 
     <Button
-        android:id="@+id/btn_minggu_kedua"
+        android:id="@+id/btn_ygkdua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pertemuan Ketiga"
         android:layout_gravity="center"
+        android:textStyle="bold"
+        android:text="View Model"
         android:layout_marginTop="10dp"/>
 
 </LinearLayout>
