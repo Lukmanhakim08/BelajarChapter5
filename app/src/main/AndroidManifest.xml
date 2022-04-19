@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BelajarChapter5">
         <activity
+            android:name=".MingguKedua.Senin.LifeData.LifeDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MingguKedua.Senin.PakekViewModelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MingguKedua.Senin.TanpaViewModelActivity"
+            android:exported="false" />
+        <activity
             android:name=".MingguKedua.LiveDataViewModel.LiveDataViewModelActivity"
             android:exported="false" />
         <activity

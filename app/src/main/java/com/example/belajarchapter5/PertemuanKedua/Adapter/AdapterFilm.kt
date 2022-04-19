@@ -10,7 +10,13 @@ import com.example.belajarchapter5.PertemuanKedua.Model.GetAllFilmResponseItem
 import com.example.belajarchapter5.R
 import kotlinx.android.synthetic.main.item_filem.view.*
 
-data class AdapterFilm(private var datafilm : List<GetAllFilmResponseItem>, private var onclick : (GetAllFilmResponseItem)->Unit) : RecyclerView.Adapter<ViewHolder>(){
+data class AdapterFilm(private var onclick : (GetAllFilmResponseItem)->Unit) : RecyclerView.Adapter<ViewHolder>(){
+
+    private var  datafilm : List<GetAllFilmResponseItem>? = null
+
+    fun setdataFilm(film : List<GetAllFilmResponseItem>){
+        this.datafilm = film
+    }
 
     class ViewHolder(itemview : View) : RecyclerView.ViewHolder(itemview) {
 
@@ -22,22 +28,26 @@ data class AdapterFilm(private var datafilm : List<GetAllFilmResponseItem>, priv
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.itemView.text_judulfilm.text = datafilm[position].name
-        holder.itemView.text_tglfilm.text = datafilm[position].date
-        holder.itemView.text_sutradara.text = datafilm[position].director
+        holder.itemView.text_judulfilm.text = datafilm!![position].name
+        holder.itemView.text_tglfilm.text = datafilm!![position].date
+        holder.itemView.text_sutradara.text = datafilm!![position].director
 
         //get data dan menampilkan gambar
         Glide.with(holder.itemView.context)
-            .load(datafilm[position].image)
+            .load(datafilm!![position].image)
             .into(holder.itemView.img_film)
 
         holder.itemView.card_film.setOnClickListener {
-            onclick(datafilm[position])
+            onclick(datafilm!![position])
         }
     }
 
     override fun getItemCount(): Int {
-        return datafilm.size
+        if (datafilm == null){
+            return 0
+        } else{
+            return datafilm!!.size
+        }
     }
 
 }
